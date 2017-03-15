@@ -12,6 +12,8 @@
 		E20D190E1E78E72B000E32DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E20D190C1E78E72B000E32DB /* Main.storyboard */; };
 		E20D19101E78E72B000E32DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E20D190F1E78E72B000E32DB /* Assets.xcassets */; };
 		E20D19131E78E72B000E32DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E20D19111E78E72B000E32DB /* LaunchScreen.storyboard */; };
+		E20D191B1E792592000E32DB /* ChessTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20D191A1E792592000E32DB /* ChessTable.swift */; };
+		E20D191D1E792BD1000E32DB /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20D191C1E792BD1000E32DB /* GameManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		E20D190F1E78E72B000E32DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E20D19121E78E72B000E32DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E20D19141E78E72B000E32DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E20D191A1E792592000E32DB /* ChessTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChessTable.swift; sourceTree = "<group>"; };
+		E20D191C1E792BD1000E32DB /* GameManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,40 @@
 		E20D19071E78E72B000E32DB /* EzChess */ = {
 			isa = PBXGroup;
 			children = (
+				E20D19201E7932D9000E32DB /* View */,
+				E20D191F1E7932C8000E32DB /* Controller */,
+				E20D191E1E7932BE000E32DB /* Model */,
 				E20D19081E78E72B000E32DB /* AppDelegate.swift */,
-				E20D190A1E78E72B000E32DB /* ViewController.swift */,
 				E20D190C1E78E72B000E32DB /* Main.storyboard */,
 				E20D190F1E78E72B000E32DB /* Assets.xcassets */,
 				E20D19111E78E72B000E32DB /* LaunchScreen.storyboard */,
 				E20D19141E78E72B000E32DB /* Info.plist */,
 			);
 			path = EzChess;
+			sourceTree = "<group>";
+		};
+		E20D191E1E7932BE000E32DB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E20D191A1E792592000E32DB /* ChessTable.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		E20D191F1E7932C8000E32DB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E20D191C1E792BD1000E32DB /* GameManager.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		E20D19201E7932D9000E32DB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E20D190A1E78E72B000E32DB /* ViewController.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +167,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E20D190B1E78E72B000E32DB /* ViewController.swift in Sources */,
+				E20D191D1E792BD1000E32DB /* GameManager.swift in Sources */,
+				E20D191B1E792592000E32DB /* ChessTable.swift in Sources */,
 				E20D19091E78E72B000E32DB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

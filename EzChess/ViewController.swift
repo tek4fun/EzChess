@@ -8,18 +8,30 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController,UITextFieldDelegate {
+    var gameManager: GameManager! = nil
+    
+    @IBOutlet weak var txt_NumCell: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        // init Controller gameManager
+        gameManager = GameManager(self.view)
+        
+        txt_NumCell.delegate = self
+        txt_NumCell.keyboardType = .numberPad
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @IBAction func drawAction(_ sender: UIButton) {
+        let numOfCell = Int(txt_NumCell.text!)!
+        
+        //Call Controller gameManager
+        gameManager.draw(numOfCell)
     }
-
-
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let invalidCharacters = CharacterSet(charactersIn: "0123456789").inverted
+        return string.rangeOfCharacter(from: invalidCharacters, options: [], range: string.startIndex ..< string.endIndex) == nil
+    }
 }
 
